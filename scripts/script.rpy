@@ -3,12 +3,6 @@
 # Déclarez sous cette ligne les images, avec l'instruction 'image'
 # ex: image eileen heureuse = "eileen_heureuse.png"
 
-# Déclarez les personnages utilisés dans le jeu.
-define g = Character('Gwen', color="#c8ffc8")
-image gwen = "Gwen.png"
-image cv = "cv.jpg"
-image bg = "bg.jpg"
-
 
 # Le jeu commence ici
 label start:
@@ -18,17 +12,22 @@ label start:
     show gwen at left
     with dissolve
 
-    g "Bienvenu sur le CV Game !"
-    g "Vous allez découvrir mon parcours au fur et mesure tout en vous amusant !"
-    g "Je vous souhaite une agréable partie !"
+    g "Bonjour à toi !"
+    g "Pour commencer puis-je demander votre nom ?"
+    $ playerName = renpy.input("Mon nom :" )
+
+    g "Bienvenu %(playerName)s ! Je suis Gwen."
+
+    g "Tu vas découvrir mon parcours au fur et mesure tout en t'amusant !"
+    g "Je te souhaite une agréable partie !"
 
     scene bg
     with dissolve
     show gwen at left
     with dissolve
 
-    g"Bien maintenant je vais vous laisser choisir"
-    g"Par quoi voulez-vous commencer ?"
+    g"Bien maintenant je vais te laisser choisir"
+    g"Par quoi veux-tu commencer ?"
     
     show screen formation
     show screen competences

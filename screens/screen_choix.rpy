@@ -26,12 +26,3 @@ screen profil :
         ypos 350
         idle "profil.png"
         at zoom_8
-
-transform zoom_4:
-    zoom 0.4
-
-transform zoom_6:
-    zoom 0.6
-
-transform zoom_8:
-    zoom 0.8
